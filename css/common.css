@@ -44,40 +44,9 @@ body {
     background: rgb(50, 48, 45);
 }
 
-/*web端待定，暂定为不可见*/
-
-@media (min-width: 768px) {
-
-    html, body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .webHidden {
-        position: absolute;
-        top: 0;
-        z-index: 9999;
-        width: 100%;
-        height: 100%;
-        line-height: 500px;
-        background: #ffffff;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        color: #ccc;
-    }
-
-}
-
-
 /*手机端*/
 
-@media (max-width: 768px) {
-
-    .webHidden {
-        display: none;
-    }
+/*@media (max-width: 768px) {*/
 
     /*顶部导航栏*/
     .navbox {
@@ -697,4 +666,30 @@ body {
         margin-right: 0;
     }
 
-}
+
+    /*底部版权信息*/
+    footer {
+        position: relative;
+        bottom: 22px;
+        color: #85827B;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+
+        .nav_top .navbar-collapse {
+            min-width: 768px;
+        }
+
+        .joinUs > p {
+            text-align: center;
+        }
+
+        .job1, .job2 {
+            text-align: center;
+        }
+    }
+
+/*}*/
+
