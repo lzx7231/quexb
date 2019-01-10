@@ -1,0 +1,687 @@
+* {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+span {
+    line-height: 1;
+}
+
+span.eng-title {
+    display: block;
+    text-align: center;
+    color: #AAAAAA;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans", "Noto Sans CJK Sc", "Microsoft YaHei", "Microsoft Jhenghei", sans-serif;
+    font-weight: 300;
+    background: rgb(50, 48, 45);
+}
+
+/*web端待定，暂定为不可见*/
+
+@media (min-width: 768px) {
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .webHidden {
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        line-height: 500px;
+        background: #ffffff;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ccc;
+    }
+
+}
+
+
+/*手机端*/
+
+@media (max-width: 768px) {
+
+    .webHidden {
+        display: none;
+    }
+
+    /*顶部导航栏*/
+    .navbox {
+        background: transparent;
+        border: none;
+        /*border-bottom: 1px solid rgba(59, 55, 50, 1);*/
+    }
+
+    .btnDropdown img {
+        width: 24px;
+        height: 21px;
+    }
+
+    .navbar-brand img {
+        width: 107px;
+        height: 24px;
+    }
+
+    .nav_top,
+    .nav_top .navbar-header {
+        background: rgb(50, 48, 45);
+        height: 53px;
+        padding: 0;
+    }
+
+    .nav_top .navbar-brand {
+        padding: 14px 0 16px 10px;
+    }
+
+    .nav_top .btnDropdown {
+        border: none;
+        margin: 0;
+        padding: 16px 17px 18px;
+    }
+
+    .nav_top .btnDropdown:hover,
+    .nav_top .btnDropdown:focus {
+        background-color: transparent;
+    }
+
+    .nav_top .navbar-collapse {
+        float: right;
+        right: 15px;
+        width: 339px;
+        /*min-width: 339px;*/
+        border: none;
+        /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.20);*/
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
+        color: #ff3b3732;
+    }
+
+    .nav_top .navbar-collapse::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        position: relative;
+        left: 92.9%;
+        border: 7.5px solid;
+        background: transparent;
+        border-color: transparent transparent #ffffff transparent;
+    }
+
+    .nav_top .navbar-collapse .navbar-right {
+        margin: 0;
+        background: #ffffff;
+        border: 1px solid #FFFFFF;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.20);
+        -webkit-appearance: none;
+    }
+
+    .nav_top .navbar-collapse a {
+        border-bottom: 1px solid #ffeeeeee;
+        padding: 17px 15px;
+        color: rgba(59, 55, 50, 1);
+    }
+
+    /*主要内容部分*/
+    section {
+        margin-top: 53px;
+    }
+
+    section > div {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /*下载雀享宝*/
+    .qxbDownload {
+        height: 614px;
+        padding-top: 63px;
+    }
+
+    .qxbDownload > div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .appLogo {
+        height: 49px;
+        width: 159px;
+        margin-bottom: 25px;
+        background: url("../img/qxbDownload.png") no-repeat;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    .qrCode {
+        width: 153px;
+        height: 153px;
+        padding: 3px;
+        background: #ffffff;
+    }
+
+    .tips-title {
+        color: rgb(225, 195, 118);
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        width: 169px;
+        height: 28px;
+        line-height: 28px;
+        margin-top: 28px;
+        margin-bottom: 11px;
+        /*以下实现文字渐变, 依赖WebKit内核实现*/
+        background: linear-gradient(left, rgba(206, 161, 68, 1), rgba(200, 150, 54, 1) 50%, rgba(251, 242, 185, 1));
+        background: -moz-linear-gradient(left, rgba(206, 161, 68, 1), rgba(200, 150, 54, 1) 50%, rgba(251, 242, 185, 1));
+        background: -o-linear-gradient(left, rgba(206, 161, 68, 1), rgba(200, 150, 54, 1) 50%, rgba(251, 242, 185, 1));
+        background: -webkit-linear-gradient(left, rgba(206, 161, 68, 1) 0%, rgb(225, 195, 118) 50%, rgb(214, 201, 149) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .tips-title::after {
+        display: block;
+        content: '';
+        width: 21px;
+        height: 3px;
+        margin: 11px auto;
+        background: rgb(225, 195, 118);
+        background: -moz-linear-gradient(left, rgba(200, 150, 54, 1), rgba(251, 242, 185, 1));
+        background: -o-linear-gradient(left, rgba(200, 150, 54, 1), rgba(251, 242, 185, 1));
+        background: -webkit-linear-gradient(left, rgba(200, 150, 54, 1), rgba(251, 242, 185, 1));
+    }
+
+    .tips {
+        color: #fff;
+        width: 256px;
+        height: 0;
+        /*line-height: 24px;*/
+        padding-bottom: 38px;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .server-container {
+        overflow: hidden;
+        width: 342px;
+        margin-top: 58px;
+    }
+
+    .iosDownload,
+    .appDownload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(53, 50, 47, 1);
+        font-size: 15px;
+        float: left;
+        width: 164px;
+        height: 66px;
+        line-height: 1;
+        border: 1px solid rgba(211, 165, 87, 1);
+        background-color: #ffffff;
+    }
+
+    .iosDownload {
+        margin-right: 14px;
+    }
+
+    .iosDownload img,
+    .appDownload img {
+        width: 30px;
+        height: 35px;
+        margin-right: 15px;
+    }
+
+
+    /*团队介绍*/
+    .aboutTeam {
+        height: 592px;
+        background: #ffffff;
+    }
+
+    .aboutTeam h2 {
+        width: 309px;
+        line-height: 31px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 64px 0;
+    }
+
+    .aboutTeam .bossInfo {
+        width: 252px;
+        margin: 0 auto;
+    }
+
+    .aboutTeam .bossInfo ul {
+        text-align: right;
+        float: right;
+        margin-top: 72px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .aboutTeam .bossInfo ul > li:nth-of-type(1) {
+        position: relative;
+        font-size: 28px;
+    }
+
+    .aboutTeam .bossInfo ul > li:nth-of-type(2) {
+        font-size: 15px;
+        color: rgba(59, 55, 50, 1);
+        padding-top: 11px;
+    }
+
+    .aboutTeam .bossInfo ul > li:nth-of-type(1)::after {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 30px;
+        right: 0;
+        background: -webkit-linear-gradient(left, rgba(247, 235, 162, 1) 0%, rgba(200, 150, 54, 1) 50%, rgba(206, 161, 68, 1) 100%);
+    }
+
+    .aboutTeam .bossIntroduce {
+        width: 290px;
+        margin: 34px auto -22px auto;
+    }
+
+    .aboutTeam .footer-bg1 {
+        height: 122px;
+        background: url("../img/bg1.png") no-repeat center center;
+    }
+
+    /*关于雀享科技*/
+    .aboutCompany {
+        height: 704px;
+        background: rgba(255, 250, 239, 1);
+    }
+
+    .aboutCompany h3 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .aboutCompany > span {
+        color: rgba(59, 55, 50, 1);
+        display: block;
+        text-align: center;
+        margin-bottom: 31px;
+    }
+
+    .aboutCompany .company-introduce {
+        width: 320px;
+        height: 311px;
+        margin: 0 auto;
+    }
+
+    .aboutCompany .company-introduce p {
+        margin: 0;
+        line-height: 27px;
+        text-indent: 2em;
+    }
+
+    .aboutCompany .company-business {
+        overflow: hidden;
+        width: 320px;
+        margin: 0 auto;
+        margin-top: 28px;
+        padding: 0 9px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .aboutCompany .company-business img {
+        width: 81px;
+        height: 93px;
+    }
+
+    .aboutCompany .company-business > div {
+        /* 		display: flex;
+ */
+        flex: 1;
+        position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .aboutCompany .company-business > div span {
+        position: absolute;
+        text-align: center;
+        display: block;
+        text-align: center;
+        width: 100%;
+        top: 52px;
+    }
+
+    /* 真实案例 */
+    .actualCase {
+        position: relative;
+        padding-bottom: 47px;
+        background: rgba(255, 255, 255, 1);
+        text-align: center;
+        border-top: 1px solid rgba(255, 250, 239, 1);
+    }
+
+    .actualCase h3 {
+        font-weight: bold;
+        font-size: 22px;
+        padding-top: 41px;
+        margin-bottom: 10px;
+    }
+
+    .actualCase > span {
+        display: block;
+    }
+
+    .actualCase > span.quexMember {
+        font-family: MicrosoftYaHei sans-serif;
+        position: absolute;
+        top: 239px;
+        left: 50%;
+        color: #ffffff;
+        font-size: 13px;
+        padding: 5px 11px;
+        border-radius: 1px;
+        background: -webkit-linear-gradient(left, rgba(200, 150, 54, 1), rgba(222, 190, 105, 1));
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .actualCase span.momName {
+        color: rgba(44, 46, 50, 1);
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .actualCase span.mom-desc {
+        color: rgba(44, 46, 50, 1);
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 6px;
+        margin-bottom: 22px;
+    }
+
+    .actualCase .mon-talk {
+        position: relative;
+        width: 322px;
+        height: 385px;
+        padding-top: 33px;
+        padding-bottom: 29px;
+        background: rgba(255, 250, 239, 1);
+        margin: 0 auto;
+    }
+
+    .actualCase .bg2 {
+        position: absolute;
+        top: -26px;
+        right: 24px;
+        width: 68px;
+        height: 26px;
+        background: url("../img/bg2.png");
+    }
+
+    .actualCase .bg-lt,
+    .actualCase .bg-br {
+        position: absolute;
+        width: 15px;
+        height: 17px;
+    }
+
+    .actualCase .bg-lt {
+        background: url("../img/lt.png");
+        -webkit-background-size: 15px 17px;
+        background-size: 15px 17px;
+        top: -5px;
+        left: -5px;
+    }
+
+    .actualCase .bg-br {
+        background: url("../img/br.png");
+        -webkit-background-size: 15px 17px;
+        background-size: 15px 17px;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .actualCase .bg-btm {
+        height: 28px;
+        width: 65px;
+        background: url("../img/btm.png");
+        position: absolute;
+        bottom: 0;
+        left: 81px;
+    }
+
+    .actualCase .talk-title {
+        width: 300px;
+        margin: -5px auto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 28px;
+        background: -webkit-linear-gradient(left, #C89636, #F7EBA2);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    .actualCase .talk-content {
+        color: #2C2E32;
+        width: 292px;
+        margin: 15px auto 0 auto;
+        padding-bottom: 29px;
+        text-indent: 2em;
+        text-align: left;
+    }
+
+    .actualCase .talk-content p {
+        line-height: 1.86;
+    }
+
+    .actualCase .count {
+        margin-top: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* 加入我们 */
+    .joinUs {
+        padding-top: 40px;
+        height: 747px;
+        background: rgba(255, 250, 239, 1);
+    }
+
+    .joinUs .eng-title {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 29px;
+    }
+
+    .joinUs > span {
+        display: block;
+        text-align: center;
+    }
+
+    .joinUs span.question {
+        height: 19px;
+        line-height: 1;
+        font-size: 19px;
+        font-weight: bold;
+        background: -webkit-linear-gradient(left, #C89636, #F7EBA2);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    .joinUs span.solution {
+        font-weight: bold;
+        height: 14px;
+        line-height: 1;
+        margin-top: 11px;
+        margin-bottom: 25px;
+    }
+
+    .joinUs > p {
+        line-height: 27px;
+        padding: 0 35px 0 29px;
+        margin-bottom: 33px;
+    }
+
+    .joinUs .jobChance {
+        line-height: 1;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .joinUs .job1,
+    .joinUs .job2 {
+        padding: 20px 14px;
+        background: #FFFFFF;
+        height: 97px;
+        margin: 0 28px 10px 28px;
+        border: 1px solid #F0DCBA;
+    }
+
+    .job1 .jobName,
+    .job2 .jobName {
+        font-weight: bold;
+        line-height: 1;
+        font-size: 15px;
+    }
+
+    .job1 p,
+    .job2 p {
+        color: #282828;
+        line-height: 23px;
+    }
+
+    .joinUs .hr-email {
+        padding-top: 12px;
+        font-weight: bold;
+        background: -webkit-linear-gradient(left, #C89636, #F7EBA2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /*立刻赚钱吧*/
+    .earn-now {
+        height: 602px;
+        padding: 60px 0 87px 0;
+    }
+
+    .earn-now hr {
+        border: none;
+        height: 3px;
+        width: 21px;
+        margin: 12px auto;
+        background: -webkit-linear-gradient(left, #C89636, #F7EBA2);
+    }
+
+    .earn-now .earn-now-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1;
+        color: #C89636;
+        background: -webkit-linear-gradient(left, #C89636, #F7EBA2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .earn-now .earn-now-content {
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 28px;
+    }
+
+    .earn-now .earn-now-content p {
+        line-height: 1;
+        padding-top: 7px;
+    }
+
+    .earn-now .appDownload,
+    .earn-now .iosDownload {
+        margin: 10px auto;
+        float: none;
+    }
+
+    .earn-now .appLogo {
+        margin: 49px auto 18px auto;
+    }
+
+    .earn-now .earn-now-link {
+        text-align: center;
+        line-height: 1;
+        font-size: 11px;
+        color: #E8D089;
+        margin-bottom: 14px;
+    }
+
+    .earn-now .earn-now-imgs {
+        text-align: center;
+    }
+
+    .earn-now .earn-now-imgs img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .earn-now .earn-now-imgs > a {
+        display: inline-block;
+        padding: 0 7px;
+    }
+
+    .earn-now .earn-now-imgs > a:nth-of-type(4) {
+        margin-right: 0;
+    }
+
+}
