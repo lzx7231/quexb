@@ -331,6 +331,8 @@ body {
     .aboutTeam .footer-bg1 {
         height: 122px;
         background: url("../img/bg1.png") no-repeat center center;
+        -webkit-background-size: 100% 122px;
+        background-size: 100% 122px;
     }
 
     /*关于雀享科技*/
