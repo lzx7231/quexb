@@ -640,13 +640,13 @@ body {
         margin: 49px auto 18px auto;
     }
 
-    .earn-now .earn-now-link {
-        text-align: center;
-        line-height: 1;
-        font-size: 11px;
-        color: #E8D089;
-        margin-bottom: 14px;
-    }
+    /*.earn-now .earn-now-link {*/
+        /*text-align: center;*/
+        /*line-height: 1;*/
+        /*font-size: 11px;*/
+        /*color: #E8D089;*/
+        /*margin-bottom: 14px;*/
+    /*}*/
 
     .earn-now .earn-now-imgs {
         text-align: center;
@@ -674,6 +674,10 @@ body {
         color: #85827B;
         font-size: 10px;
         text-align: center;
+    }
+
+    footer a {
+        color: #85827B;
     }
 
     @media (min-width: 768px) {
