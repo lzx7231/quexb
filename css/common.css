@@ -540,6 +540,11 @@ body {
         background: rgba(255, 250, 239, 1);
     }
 
+    .joinUs h3 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
     .joinUs .eng-title {
         font-size: 13px;
         margin-top: 10px;
@@ -570,9 +575,14 @@ body {
     }
 
     .joinUs > p {
+        text-indent: 2em;
         line-height: 27px;
         padding: 0 35px 0 29px;
         margin-bottom: 33px;
+    }
+
+    .joinUs > p:nth-of-type(1) {
+        margin-bottom: 0;
     }
 
     .joinUs .jobChance {
